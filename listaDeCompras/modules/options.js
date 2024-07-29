@@ -1,12 +1,11 @@
-import addMovie from "./addMovie.js"
+import addItem from "../modules/addItem"
+import removeItem from "../modules/removeItem"
+import searchItem from "../modules/searchItem"
 import sortList from "../modules/sortList.js"
-import searchMovie from "./searchMovie.js"
-import showOneList from "./showOneList.js"
-import markAsAttended from "./markAsAttended.js"
-import removeMovie from "../modules/removeMovie.js"
+import showList from "../modules/showList"
+import cleanList from "../modules/cleanList.js"
 
-let listOfMovies = []
-let listOfMoviesWatched = [{title: "Blade Runner 2047", year: "1982"}]
+let listOfItems = []
 
 export default function options(message) {
     let i = true
@@ -15,22 +14,22 @@ export default function options(message) {
         let option = Number(prompt('Digite o número da operação: '))
         switch(option){
             case 1:
-                addMovie(listOfMovies)
+                addItem(listOfItems)
                 break
             case 2:
-                sortList(listOfMovies, listOfMoviesWatched)
+                removeItem(listOfItems)
                 break
             case 3:
-                searchMovie(listOfMovies)
+                searchItem(listOfItems)
                 break
             case 4:
-                showOneList(listOfMovies, listOfMoviesWatched)
+                sortList(listOfItems)
                 break
             case 5:
-                markAsAttended(listOfMovies, listOfMoviesWatched)
+                showList(listOfItems)
                 break
             case 6:
-                removeMovie(listOfMovies)
+                listOfItems = cleanList(listOfItems)
                 break
             case 9:
                 console.log("Encerrando...");

@@ -1,14 +1,14 @@
 import options from "./modules/options.js"
 
 const message = `
-    LISTA DE COMPRAS - MENU
+    LISTA DE FILMES - MENU
 
-    1 - Adicionar item
-    2 - Remover item
-    3 - Pesquisar item
-    4 - Ordenar lista
-    5 - Exibir lista
-    6 - Limpar a lista
-    9 - Sair
+[1] - Adicionar um filme
+[2] - Ordenar as listas
+[3] - Pesquisar um filme
+[4] - Exibir uma lista
+[5] - Marcar como assistido
+[6] - Remover um filme
+[9] - Encerrar programa
 `
 options(message)

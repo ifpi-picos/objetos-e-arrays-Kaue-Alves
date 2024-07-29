@@ -1,8 +1,8 @@
 export default function showList(list) {
-    console.log("");
+    console.log("LISTA DE COMPRAS\n");
     if(list.length > 0) {
-        list.forEach((movie, index) => {
-            console.log(`${index} - ${movie.title} (${movie.year})`);
+        list.forEach((item, index) => {
+            console.log(`${index} - ${item}`);
         });
     } else {
         console.log("A lista está vazia.");
